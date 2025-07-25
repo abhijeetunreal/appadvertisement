@@ -1,0 +1,34 @@
+# data/site.yaml
+
+footer:
+  copyright: "&copy; 2025 App Suite. All Rights Reserved."
+  links:
+    - title: "Navigate"
+      items:
+        - name: "Home"
+          url: "/"
+        - name: "All Apps"
+          url: "/#apps"
+    - title: "Company"
+      items:
+        - name: "About Us"
+          url: "#"
+        - name: "Careers"
+          url: "#"
+        - name: "Contact"
+          url: "#"
+    - title: "Legal"
+      items:
+        - name: "Privacy Policy"
+          url: "#"
+        - name: "Terms of Service"
+          url: "#"
+  socials:
+    - icon: "fab fa-facebook"
+      url: "#"
+    - icon: "fab fa-twitter"
+      url: "#"
+    - icon: "fab fa-instagram"
+      url: "#"
+    - icon: "fab fa-linkedin"
+      url: "#"
