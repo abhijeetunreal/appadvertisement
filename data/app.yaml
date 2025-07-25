@@ -25,11 +25,11 @@ hero:
   highlighted_word: "Effortlessly"
   subtitle: "TaskFlow helps you manage your tasks, projects, and goals in one intuitive platform. Boost your productivity today."
   download_buttons:
-    - src: "https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg"
-      alt: "Download on the App Store"
-      url: "#"
-    - src: "https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+    - src: "img/googleplay.png"
       alt: "Get it on Google Play"
+      url: "#"
+    - src: "img/applestore.png"
+      alt: "Download on the App Store"
       url: "#"
   mockup:
     src: "https://placehold.co/320x640/4361ee/ffffff?text=TaskFlow+App"
