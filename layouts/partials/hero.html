@@ -1,0 +1,54 @@
+{{/* layouts/partials/hero.html */}}
+{{ $app := . }}
+{{ $isHome := eq .Kind "home" }}
+{{ $appData := (and (not $isHome) $app.Params.slug (index .Site.Data.apps_overview.apps $app.Params.slug)) }}
+
+<section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 {{ if $isHome }}bg-light{{ end }}">
+    <div class="container mx-auto flex flex-col md:flex-row items-center text-center md:text-left">
+        <div class="md:w-1/2 mb-12 md:mb-0">
+            {{ if $isHome }}
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">A Powerful Suite of <span class="text-primary">Productivity Apps</span></h1>
+                <p class="text-lg text-gray-600 mb-8 max-w-lg mx-auto md:mx-0">From task management to team collaboration, our tools are designed to streamline your workflow and simplify your life.</p>
+                <div class="flex justify-center md:justify-start">
+                    <a href="#apps" class="download-btn bg-primary text-white px-8 py-4 rounded-full font-bold text-lg shadow-xl">Explore Our Apps</a>
+                </div>
+            {{ else if $app.Params.hero }}
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">{{ $app.Params.hero.title }} <span class="text-primary">{{ $app.Params.hero.highlighted_word }}</span></h1>
+                <p class="text-lg text-gray-600 mb-8 max-w-lg mx-auto md:mx-0">{{ $app.Params.hero.subtitle }}</p>
+                
+                {{ $downloadButtons := or $app.Params.hero.download_buttons .Site.Data.config.site.download_buttons }}
+                {{ with $downloadButtons }}
+                <div class="flex flex-col sm:flex-row items-center justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
+                    {{ range . }}
+                    <a href="{{ .url }}" class="download-btn {{ .bg_class }} {{ .text_class }} {{ .hover_bg_class }} px-6 py-3 rounded-full font-semibold shadow flex items-center">
+                        <i class="{{ .icon }} mr-3"></i>
+                        <span class="text-left">
+                            <span class="block text-xs opacity-80">{{ .line1 }}</span>
+                            <span class="block text-lg -mt-0.5">{{ .line2 }}</span>
+                        </span>
+                    </a>
+                    {{ end }}
+                </div>
+                {{ end }}
+            {{ end }}
+        </div>
+        
+        <div class="md:w-1/2 flex justify-center phone-mockup">
+            <div class="iphone-mockup">
+                <div class="iphone-notch"><div class="iphone-camera"></div></div>
+                {{ if $isHome }}
+                    {{ $featuredApp := index .Site.Data.apps_overview.apps "taskflow" }}
+                    {{ with $featuredApp }}
+                        <img src="{{ .hero.mockup.src }}" alt="{{ .hero.mockup.alt }}" class="iphone-screen" onerror="this.onerror=null;this.src='{{ .hero.mockup.fallback_src }}';">
+                    {{ end }}
+                {{ else if $app.Params.hero.mockup }}
+                    <img src="{{ $app.Params.hero.mockup.src }}" alt="{{ $app.Params.hero.mockup.alt }}" class="iphone-screen" onerror="this.onerror=null;this.src='{{ $app.Params.hero.mockup.fallback_src }}';">
+                {{ else if $app.Params.app }}
+                    <img src="{{ $app.Params.app.mockup.src }}" alt="{{ $app.Params.app.mockup.alt }}" class="iphone-screen" onerror="this.onerror=null;this.src='{{ $app.Params.app.mockup.fallback_src }}';">
+                {{ else if $appData }}
+                    <img src="{{ $appData.hero.mockup.src }}" alt="{{ $appData.hero.mockup.alt }}" class="iphone-screen" onerror="this.onerror=null;this.src='{{ $appData.hero.mockup.fallback_src }}';">
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</section>

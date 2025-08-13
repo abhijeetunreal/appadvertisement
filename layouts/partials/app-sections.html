@@ -1,0 +1,29 @@
+{{/* layouts/partials/app-sections.html */}}
+{{ $app := . }}
+{{ $siteConfig := .Site.Data.config.site }}
+{{ $appData := (index .Site.Data.apps_overview.apps $app.Params.slug) }}
+
+{{ $features := or $app.Params.features (or $app.Params.app.features (and $siteConfig.sections.features (dict "title" $siteConfig.sections.features.title "subtitle" $siteConfig.sections.features.subtitle "cards" $siteConfig.common_features))) }}
+{{ with $features }}
+    {{ partial "features.html" . }}
+{{ end }}
+
+{{ $how := or $app.Params.how_it_works (or $app.Params.app.how_it_works (and $siteConfig.sections.how_it_works (dict "title" $siteConfig.sections.how_it_works.title "subtitle" $siteConfig.sections.how_it_works.subtitle "steps" $siteConfig.common_steps))) }}
+{{ with $how }}
+    {{ partial "how-it-works.html" . }}
+{{ end }}
+
+{{ $testimonials := or $app.Params.testimonials (and $siteConfig.sections.testimonials (dict "title" $siteConfig.sections.testimonials.title "subtitle" $siteConfig.sections.testimonials.subtitle "cards" (slice))) }}
+{{ with $testimonials }}
+    {{ partial "testimonials.html" . }}
+{{ end }}
+
+{{ $faq := or $app.Params.faq (and $siteConfig.sections.faq (dict "title" $siteConfig.sections.faq.title "subtitle" $siteConfig.sections.faq.subtitle "items" $siteConfig.common_faq)) }}
+{{ with $faq }}
+    {{ partial "faq.html" . }}
+{{ end }}
+
+{{ $cta := or $app.Params.cta (and $siteConfig.sections.cta (dict "title" $siteConfig.sections.cta.title "subtitle" $siteConfig.sections.cta.subtitle)) }}
+{{ with $cta }}
+    {{ partial "cta.html" . }}
+{{ end }}

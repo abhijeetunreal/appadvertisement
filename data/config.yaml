@@ -1,0 +1,97 @@
+# Common configuration values for the site
+site:
+  name: "App Suite"
+  description: "A collection of powerful productivity tools designed for you."
+  logo:
+    icon: "fas fa-layer-group"
+    initials: "AS"
+  
+  # Common section titles and descriptions
+  sections:
+    features:
+      title: "Powerful Features, Simple Interface"
+      subtitle: "Everything you need to stay organized and productive."
+    
+    how_it_works:
+      title: "Get Started in 3 Easy Steps"
+      subtitle: "Simple setup, powerful results. Start organizing in minutes."
+    
+    testimonials:
+      title: "Loved by Professionals Worldwide"
+      subtitle: "Join thousands of satisfied users transforming their productivity."
+    
+    faq:
+      title: "Frequently Asked Questions"
+      subtitle: "Have questions? We've got answers. Contact our support team if you need more help."
+    
+    cta:
+      title: "Ready to Transform Your Productivity?"
+      subtitle: "Join over 500,000 users who have organized their lives with our apps. Download now and get started in minutes."
+  
+  # Common navigation structure
+  nav:
+    links:
+      - name: "Features"
+        url: "#features"
+      - name: "How It Works"
+        url: "#how-it-works"
+      - name: "Testimonials"
+        url: "#testimonials"
+      - name: "FAQ"
+        url: "#faq"
+    button:
+      text: "Download"
+      url: "#download"
+  
+  # Common download button structure
+  download_buttons:
+    - url: "#"
+      bg_class: "bg-white"
+      text_class: "text-primary"
+      hover_bg_class: "hover:bg-gray-100"
+      icon: "fab fa-apple"
+      line1: "Download on the"
+      line2: "App Store"
+    - url: "#"
+      bg_class: "bg-dark"
+      text_class: "text-white"
+      hover_bg_class: "hover:bg-gray-800"
+      icon: "fab fa-google-play"
+      line1: "GET IT ON"
+      line2: "Google Play"
+  
+  # Common feature structure
+  common_features:
+    - icon: "fas fa-tasks"
+      icon_bg_class: "bg-blue-100"
+      icon_text_class: "text-primary"
+      title: "Task Management"
+      description: "Create, organize, and prioritize tasks with an intuitive drag-and-drop interface."
+    - icon: "fas fa-sync-alt"
+      icon_bg_class: "bg-purple-100"
+      icon_text_class: "text-secondary"
+      title: "Seamless Sync"
+      description: "Access your tasks from any device. Real-time sync keeps you up-to-date everywhere."
+    - icon: "fas fa-chart-pie"
+      icon_bg_class: "bg-green-100"
+      icon_text_class: "text-green-500"
+      title: "Productivity Analytics"
+      description: "Track progress with visual reports. Identify patterns and improve your workflow."
+  
+  # Common steps structure
+  common_steps:
+    - title: "Create Account"
+      description: "Sign up in less than 60 seconds with your email or social accounts."
+    - title: "Add Your Tasks"
+      description: "Import existing tasks or create new ones. Organize by project or priority."
+    - title: "Stay Organized"
+      description: "Use our smart tools to manage your workflow and boost productivity daily."
+  
+  # Common FAQ structure
+  common_faq:
+    - question: "Is this app free to use?"
+      answer: "Yes, we offer a robust free version with all essential features. We also offer premium plans with additional capabilities."
+    - question: "Is my data secure?"
+      answer: "Absolutely. We use industry-standard encryption for all data in transit and at rest."
+    - question: "Can I use this on multiple devices?"
+      answer: "Yes, our apps sync seamlessly across all your devices, including a web app that works on any browser."

@@ -1,0 +1,61 @@
+# Apps overview for home page
+apps:
+  taskflow:
+    slug: "taskflow"
+    tagline: "The ultimate task management solution for individuals and teams."
+    logo:
+      initials: "TF"
+      name: "TaskFlow"
+    hero:
+      mockup:
+        src: "https://placehold.co/320x640/4361ee/ffffff?text=TaskFlow+App"
+        alt: "TaskFlow App Screenshot"
+        fallback_src: "https://placehold.co/320x640/cccccc/ffffff?text=Image+Not+Found"
+  
+  visualnoteai:
+    slug: "visualnoteai"
+    tagline: "The ultimate AI-powered visual note-taking solution for individuals and teams."
+    logo:
+      initials: "VN"
+      name: "VisualNoteAI"
+    hero:
+      mockup:
+        src: "https://placehold.co/320x640/4361ee/ffffff?text=VisualNoteAI+App"
+        alt: "VisualNoteAI App Screenshot"
+        fallback_src: "https://placehold.co/320x640/cccccc/ffffff?text=Image+Not+Found"
+
+  monkey:
+    slug: "monkey"
+    tagline: "The ultimate task management solution for individuals and teams."
+    logo:
+      initials: "MM"
+      name: "monkey"
+    hero:
+      mockup:
+        src: "https://placehold.co/320x640/4361ee/ffffff?text=TaskFlow+App"
+        alt: "TaskFlow App Screenshot"
+        fallback_src: "https://placehold.co/320x640/cccccc/ffffff?text=Image+Not+Found"
+
+  money:
+    slug: "money"
+    tagline: "The ultimate task management solution for individuals and teams."
+    logo:
+      initials: "MN"
+      name: "money"
+    hero:
+      mockup:
+        src: "https://placehold.co/320x640/4361ee/ffffff?text=TaskFlow+App"
+        alt: "TaskFlow App Screenshot"
+        fallback_src: "https://placehold.co/320x640/cccccc/ffffff?text=Image+Not+Found"
+
+  example:
+    slug: "example"
+    tagline: "The ultimate task management solution for individuals and teams."
+    logo:
+      initials: "EX"
+      name: "example"
+    hero:
+      mockup:
+        src: "https://placehold.co/320x640/4361ee/ffffff?text=TaskFlow+App"
+        alt: "TaskFlow App Screenshot"
+        fallback_src: "https://placehold.co/320x640/cccccc/ffffff?text=Image+Not+Found"

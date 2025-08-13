@@ -1,0 +1,26 @@
+{{/* layouts/partials/faq.html */}}
+{{ $faq := . }}
+
+{{ with $faq }}
+<section id="faq" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">{{ .title }}</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">{{ .subtitle }}</p>
+        </div>
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+            {{ range $index, $element := .items }}
+            <div class="{{ if and .items (lt $index (sub (len .items) 1)) }}border-b border-gray-200{{ end }}">
+                <button class="faq-question w-full text-left p-6 font-medium text-lg flex justify-between items-center hover:bg-gray-50">
+                    <span>{{ .question }}</span>
+                    <i class="fas fa-chevron-down text-primary transform transition-transform"></i>
+                </button>
+                <div class="accordion-content">
+                    <div class="px-6 pb-6 text-gray-600">{{ .answer }}</div>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+{{ end }}

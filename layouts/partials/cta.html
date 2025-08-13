@@ -1,0 +1,22 @@
+{{/* layouts/partials/cta.html */}}
+{{ $cta := . }}
+
+{{ with $cta }}
+<section id="download" class="py-20 bg-gradient-to-r from-primary to-secondary">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">{{ .title }}</h2>
+        <p class="text-blue-100 max-w-2xl mx-auto mb-10">{{ .subtitle }}</p>
+        <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
+            {{ range .buttons }}
+            <a href="{{ .url }}" class="download-btn {{ .bg_class }} {{ .text_class }} {{ .hover_bg_class }} px-8 py-4 rounded-full font-bold text-lg shadow-xl flex items-center justify-center transition-all w-64 sm:w-auto">
+                <i class="{{ .icon }} {{ if eq .icon "fab fa-apple" }}text-3xl{{ else }}text-2xl{{ end }} mr-3"></i>
+                <div>
+                    <div class="text-xs text-left">{{ .line1 }}</div>
+                    <div class="text-xl -mt-1">{{ .line2 }}</div>
+                </div>
+            </a>
+            {{ end }}
+        </div>
+    </div>
+</section>
+{{ end }}
