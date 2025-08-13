@@ -1,6 +1,7 @@
 {{/* layouts/partials/hero.html */}}
 {{ $app := . }}
 {{ $isHome := eq .Kind "home" }}
+{{ $appData := (and (not $isHome) $app.Params.slug (index .Site.Data.apps_overview.apps $app.Params.slug)) }}
 
 <section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 {{ if $isHome }}bg-light{{ end }}">
     <div class="container mx-auto flex flex-col md:flex-row items-center text-center md:text-left">
@@ -15,7 +16,8 @@
                 <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">{{ $app.Params.hero.title }} <span class="text-primary">{{ $app.Params.hero.highlighted_word }}</span></h1>
                 <p class="text-lg text-gray-600 mb-8 max-w-lg mx-auto md:mx-0">{{ $app.Params.hero.subtitle }}</p>
                 
-                {{ with $app.Params.hero.download_buttons }}
+                {{ $downloadButtons := or $app.Params.hero.download_buttons .Site.Data.config.site.download_buttons }}
+                {{ with $downloadButtons }}
                 <div class="flex flex-col sm:flex-row items-center justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
                     {{ range . }}
                     <a href="{{ .url }}" class="download-btn {{ .bg_class }} {{ .text_class }} {{ .hover_bg_class }} px-6 py-3 rounded-full font-semibold shadow flex items-center">
@@ -43,6 +45,8 @@
                     <img src="{{ $app.Params.hero.mockup.src }}" alt="{{ $app.Params.hero.mockup.alt }}" class="iphone-screen" onerror="this.onerror=null;this.src='{{ $app.Params.hero.mockup.fallback_src }}';">
                 {{ else if $app.Params.app }}
                     <img src="{{ $app.Params.app.mockup.src }}" alt="{{ $app.Params.app.mockup.alt }}" class="iphone-screen" onerror="this.onerror=null;this.src='{{ $app.Params.app.mockup.fallback_src }}';">
+                {{ else if $appData }}
+                    <img src="{{ $appData.hero.mockup.src }}" alt="{{ $appData.hero.mockup.alt }}" class="iphone-screen" onerror="this.onerror=null;this.src='{{ $appData.hero.mockup.fallback_src }}';">
                 {{ end }}
             </div>
         </div>

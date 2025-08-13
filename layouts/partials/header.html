@@ -1,6 +1,24 @@
 {{/* layouts/partials/header.html */}}
 {{ $app := . }}
 {{ $isHome := eq .Kind "home" }}
+{{ $nav := or $app.Params.nav .Site.Data.config.site.nav }}
+{{ $scratch := newScratch }}
+{{ if not $isHome }}
+    {{ if $app.Params.logo }}
+        {{ $scratch.Set "logoInitials" $app.Params.logo.initials }}
+        {{ $scratch.Set "appName" $app.Params.logo.name }}
+    {{ else if $app.Params.app }}
+        {{ $scratch.Set "logoInitials" $app.Params.app.initials }}
+        {{ $scratch.Set "appName" $app.Params.app.name }}
+    {{ else if $app.Params.slug }}
+        {{ with (index .Site.Data.apps_overview.apps $app.Params.slug) }}
+            {{ $scratch.Set "logoInitials" .logo.initials }}
+            {{ $scratch.Set "appName" .logo.name }}
+        {{ end }}
+    {{ end }}
+{{ end }}
+{{ $logoInitials := $scratch.Get "logoInitials" }}
+{{ $appName := $scratch.Get "appName" }}
 
 <header id="header" class="fixed w-full bg-white/80 backdrop-blur-sm shadow-md z-50 transition-all duration-300">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
@@ -8,24 +26,20 @@
             <div class="bg-primary w-10 h-10 rounded-lg flex items-center justify-center">
                 {{ if $isHome }}
                     <span class="text-white font-bold text-xl"><i class="fas fa-layer-group"></i></span>
-                {{ else if $app.Params.logo }}
-                    <span class="text-white font-bold text-xl">{{ $app.Params.logo.initials }}</span>
-                {{ else if $app.Params.app }}
-                    <span class="text-white font-bold text-xl">{{ $app.Params.app.initials }}</span>
+                {{ else if $logoInitials }}
+                    <span class="text-white font-bold text-xl">{{ $logoInitials }}</span>
                 {{ end }}
             </div>
             {{ if $isHome }}
                 <span class="ml-3 font-bold text-xl text-dark">App Suite</span>
-            {{ else if $app.Params.logo }}
-                <a href="/apps/{{ $app.Params.slug }}/"><span class="ml-3 font-bold text-xl text-dark">{{ $app.Params.logo.name }}</span></a>
-            {{ else if $app.Params.app }}
-                <a href="/apps/{{ $app.Params.slug }}/"><span class="ml-3 font-bold text-xl text-dark">{{ $app.Params.app.name }}</span></a>
+            {{ else if $appName }}
+                <a href="/apps/{{ $app.Params.slug }}/"><span class="ml-3 font-bold text-xl text-dark">{{ $appName }}</span></a>
             {{ end }}
         </div>
         
-        {{ if and (not $isHome) $app.Params.nav }}
+        {{ if and (not $isHome) $nav }}
         <nav class="hidden md:flex space-x-8">
-            {{ range $app.Params.nav.links }}
+            {{ range $nav.links }}
                 <a href="{{ .url }}" class="nav-link-desktop font-medium text-gray-600 hover:text-primary">{{ .name }}</a>
             {{ end }}
         </nav>
@@ -33,8 +47,8 @@
         
         {{ if $isHome }}
             <a href="#apps" class="hidden md:inline-block bg-primary hover:bg-secondary text-white px-6 py-2 rounded-full font-medium transition-colors duration-300 shadow-md">View All Apps</a>
-        {{ else if $app.Params.nav.button }}
-            <a href="{{ $app.Params.nav.button.url }}" class="hidden md:inline-block bg-primary hover:bg-secondary text-white px-6 py-2 rounded-full font-medium transition-colors duration-300 shadow-md">{{ $app.Params.nav.button.text }}</a>
+        {{ else if $nav.button }}
+            <a href="{{ $nav.button.url }}" class="hidden md:inline-block bg-primary hover:bg-secondary text-white px-6 py-2 rounded-full font-medium transition-colors duration-300 shadow-md">{{ $nav.button.text }}</a>
         {{ end }}
         
         <button id="mobile-menu-button" class="md:hidden text-gray-600 z-50 hamburger-icon">
@@ -46,13 +60,13 @@
         </button>
     </div>
     
-    {{ if and (not $isHome) $app.Params.nav }}
+    {{ if and (not $isHome) $nav }}
     <div id="mobile-menu" class="hidden fixed inset-0 bg-white/95 backdrop-blur-lg md:hidden">
         <div class="flex flex-col items-center justify-center h-full space-y-8">
-            {{ range $app.Params.nav.links }}
+            {{ range $nav.links }}
                 <a href="{{ .url }}" class="text-2xl font-medium text-gray-700 hover:text-primary">{{ .name }}</a>
             {{ end }}
-            {{ with $app.Params.nav.button }}
+            {{ with $nav.button }}
             <a href="{{ .url }}" class="mt-6 bg-primary text-white px-8 py-3 rounded-full text-lg font-medium">Download Now</a>
             {{ end }}
         </div>
