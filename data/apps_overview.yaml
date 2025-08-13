@@ -35,3 +35,27 @@ apps:
         src: "https://placehold.co/320x640/4361ee/ffffff?text=TaskFlow+App"
         alt: "TaskFlow App Screenshot"
         fallback_src: "https://placehold.co/320x640/cccccc/ffffff?text=Image+Not+Found"
+
+  money:
+    slug: "money"
+    tagline: "The ultimate task management solution for individuals and teams."
+    logo:
+      initials: "MN"
+      name: "money"
+    hero:
+      mockup:
+        src: "https://placehold.co/320x640/4361ee/ffffff?text=TaskFlow+App"
+        alt: "TaskFlow App Screenshot"
+        fallback_src: "https://placehold.co/320x640/cccccc/ffffff?text=Image+Not+Found"
+
+  example:
+    slug: "example"
+    tagline: "The ultimate task management solution for individuals and teams."
+    logo:
+      initials: "EX"
+      name: "example"
+    hero:
+      mockup:
+        src: "https://placehold.co/320x640/4361ee/ffffff?text=TaskFlow+App"
+        alt: "TaskFlow App Screenshot"
+        fallback_src: "https://placehold.co/320x640/cccccc/ffffff?text=Image+Not+Found"

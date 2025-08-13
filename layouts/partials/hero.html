@@ -18,8 +18,12 @@
                 {{ with $app.Params.hero.download_buttons }}
                 <div class="flex flex-col sm:flex-row items-center justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
                     {{ range . }}
-                    <a href="{{ .url }}" class="download-btn">
-                        <img src="{{ .src }}" alt="{{ .alt }}" class="h-14 transition-transform">
+                    <a href="{{ .url }}" class="download-btn {{ .bg_class }} {{ .text_class }} {{ .hover_bg_class }} px-6 py-3 rounded-full font-semibold shadow flex items-center">
+                        <i class="{{ .icon }} mr-3"></i>
+                        <span class="text-left">
+                            <span class="block text-xs opacity-80">{{ .line1 }}</span>
+                            <span class="block text-lg -mt-0.5">{{ .line2 }}</span>
+                        </span>
                     </a>
                     {{ end }}
                 </div>
@@ -37,6 +41,8 @@
                     {{ end }}
                 {{ else if $app.Params.hero.mockup }}
                     <img src="{{ $app.Params.hero.mockup.src }}" alt="{{ $app.Params.hero.mockup.alt }}" class="iphone-screen" onerror="this.onerror=null;this.src='{{ $app.Params.hero.mockup.fallback_src }}';">
+                {{ else if $app.Params.app }}
+                    <img src="{{ $app.Params.app.mockup.src }}" alt="{{ $app.Params.app.mockup.alt }}" class="iphone-screen" onerror="this.onerror=null;this.src='{{ $app.Params.app.mockup.fallback_src }}';">
                 {{ end }}
             </div>
         </div>

@@ -4,10 +4,16 @@ description: "The ultimate task management solution for individuals and teams."
 date: 2025-01-27
 draft: false
 slug: "taskflow"
-tagline: "The ultimate task management solution for individuals and teams."
-logo:
-  initials: "TF"
+type: "app"
+
+# App-specific metadata
+app:
   name: "TaskFlow"
+  initials: "TF"
+  tagline: "The ultimate task management solution for individuals and teams."
+  description: "TaskFlow helps you manage your tasks, projects, and goals in one intuitive platform. Boost your productivity today."
+
+# Navigation structure
 nav:
   links:
     - name: "Features"
@@ -21,21 +27,33 @@ nav:
   button:
     text: "Download"
     url: "#download"
+
+# Hero section
 hero:
   title: "Organize Your Life,"
   highlighted_word: "Effortlessly"
   subtitle: "TaskFlow helps you manage your tasks, projects, and goals in one intuitive platform. Boost your productivity today."
   download_buttons:
-    - src: "https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg"
-      alt: "Download on the App Store"
-      url: "#"
-    - src: "https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
-      alt: "Get it on Google Play"
-      url: "#"
+    - url: "#"
+      bg_class: "bg-white"
+      text_class: "text-primary"
+      hover_bg_class: "hover:bg-gray-100"
+      icon: "fab fa-apple"
+      line1: "Download on the"
+      line2: "App Store"
+    - url: "#"
+      bg_class: "bg-dark"
+      text_class: "text-white"
+      hover_bg_class: "hover:bg-gray-800"
+      icon: "fab fa-google-play"
+      line1: "GET IT ON"
+      line2: "Google Play"
   mockup:
     src: "https://placehold.co/320x640/4361ee/ffffff?text=TaskFlow+App"
     alt: "TaskFlow App Screenshot"
     fallback_src: "https://placehold.co/320x640/cccccc/ffffff?text=Image+Not+Found"
+
+# Features section
 features:
   title: "Powerful Features, Simple Interface"
   subtitle: "Everything you need to stay organized and productive."
@@ -55,6 +73,8 @@ features:
       icon_text_class: "text-green-500"
       title: "Productivity Analytics"
       description: "Track progress with visual reports. Identify patterns and improve your workflow."
+
+# How it works section
 how_it_works:
   title: "Get Started in 3 Easy Steps"
   subtitle: "Simple setup, powerful results. Start organizing in minutes."
@@ -65,6 +85,8 @@ how_it_works:
       description: "Import existing tasks or create new ones. Organize by project or priority."
     - title: "Stay Organized"
       description: "Use our smart tools to manage your workflow and boost productivity daily."
+
+# Testimonials section
 testimonials:
   title: "Loved by Professionals Worldwide"
   subtitle: "Join thousands of satisfied users transforming their productivity."
@@ -81,6 +103,8 @@ testimonials:
       name: "Michael Chen"
       role: "Software Engineer, CA"
       quote: "As a developer, staying organized has always been a struggle. TaskFlow's intuitive interface keeps me focused and on track."
+
+# FAQ section
 faq:
   title: "Frequently Asked Questions"
   subtitle: "Have questions? We've got answers. Contact our support team if you need more help."
@@ -91,24 +115,13 @@ faq:
       answer: "Absolutely. We use industry-standard encryption for all data in transit and at rest."
     - question: "Can I use TaskFlow on multiple devices?"
       answer: "Yes, TaskFlow syncs seamlessly across all your devices, including a web app that works on any browser."
+
+# CTA section
 cta:
   title: "Ready to Transform Your Productivity?"
   subtitle: "Join over 500,000 users who have organized their lives with TaskFlow. Download now and get started in minutes."
-  buttons:
-    - url: "#"
-      bg_class: "bg-white"
-      text_class: "text-primary"
-      hover_bg_class: "hover:bg-gray-100"
-      icon: "fab fa-apple"
-      line1: "Download on the"
-      line2: "App Store"
-    - url: "#"
-      bg_class: "bg-dark"
-      text_class: "text-white"
-      hover_bg_class: "hover:bg-gray-800"
-      icon: "fab fa-google-play"
-      line1: "GET IT ON"
-      line2: "Google Play"
+
+# Footer section
 footer:
   slogan: "The ultimate task management solution for individuals and teams."
   copyright: "&copy; 2025 TaskFlow. All Rights Reserved."

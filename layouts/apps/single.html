@@ -1,10 +1,24 @@
 {{ define "main" }}
-{{ $app := . }}
-
-{{ partial "header.html" $app }}
-{{ partial "hero.html" $app }}
-
-{{ partial "app-sections.html" $app }}
-
-{{ partial "footer.html" . }}
+<div style="background: lime; padding: 20px; margin: 20px; border: 5px solid red;">
+    <h1 style="color: blue; font-size: 48px;">SUCCESS!</h1>
+    <p style="font-size: 24px;">The template is working!</p>
+    
+    <h2>Page Details:</h2>
+    <ul>
+        <li><strong>Title:</strong> {{ .Title }}</li>
+        <li><strong>Slug:</strong> {{ .Slug }}</li>
+        <li><strong>Type:</strong> {{ .Type }}</li>
+        <li><strong>Section:</strong> {{ .Section }}</li>
+        <li><strong>URL:</strong> {{ .URL }}</li>
+        <li><strong>RelPermalink:</strong> {{ .RelPermalink }}</li>
+    </ul>
+    
+    <h2>Content:</h2>
+    <p>{{ .Content }}</p>
+    
+    <h2>Params:</h2>
+    <div style="background: white; padding: 10px; margin: 10px;">
+        <pre>{{ printf "%#v" .Params }}</pre>
+    </div>
+</div>
 {{ end }}

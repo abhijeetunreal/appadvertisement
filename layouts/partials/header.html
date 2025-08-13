@@ -10,12 +10,16 @@
                     <span class="text-white font-bold text-xl"><i class="fas fa-layer-group"></i></span>
                 {{ else if $app.Params.logo }}
                     <span class="text-white font-bold text-xl">{{ $app.Params.logo.initials }}</span>
+                {{ else if $app.Params.app }}
+                    <span class="text-white font-bold text-xl">{{ $app.Params.app.initials }}</span>
                 {{ end }}
             </div>
             {{ if $isHome }}
                 <span class="ml-3 font-bold text-xl text-dark">App Suite</span>
             {{ else if $app.Params.logo }}
                 <a href="/apps/{{ $app.Params.slug }}/"><span class="ml-3 font-bold text-xl text-dark">{{ $app.Params.logo.name }}</span></a>
+            {{ else if $app.Params.app }}
+                <a href="/apps/{{ $app.Params.slug }}/"><span class="ml-3 font-bold text-xl text-dark">{{ $app.Params.app.name }}</span></a>
             {{ end }}
         </div>
         
