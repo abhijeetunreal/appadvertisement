@@ -1,16 +1,13 @@
 # App Advertisement Site
 
-A Hugo-based website showcasing multiple apps with a simple, self-contained structure.
+A Hugo-based website showcasing multiple apps. App pages are authored in Markdown; the homepage cards and some defaults are driven by data files.
 
 ## 🚀 **How to Add New Apps**
 
-### **Super Simple - Just One File!**
+### Add an app page and list it on the homepage
 
-To add a new app, you only need to create **one markdown file**:
-
-1. **Create**: `content/apps/{appname}.md`
-2. **Add Content**: Put all your app content in the front matter
-3. **Save**: That's it! Your app is live
+1. Create: `content/apps/{slug}.md` with `type: "app"` and required front matter
+2. List on homepage: add an entry under `apps:` in `data/apps_overview.yaml` matching the `slug`
 
 ### **Example Structure**
 
@@ -68,6 +65,7 @@ hero:
   mockup:
     src: "path/to/mockup.png"
     alt: "App mockup"
+    fallback_src: "https://placehold.co/320x640/cccccc/ffffff?text=Image+Not+Found"
 
 # Features
 features:
@@ -136,34 +134,65 @@ Optional content below the front matter.
 appadvertisement/
 ├── content/
 │   └── apps/
-│       ├── taskflow.md          # TaskFlow app
-│       ├── visualnoteai.md      # VisualNoteAI app
-│       └── example.md           # Example app
+│       ├── taskflow.md
+│       ├── visualnoteai.md
+│       ├── money.md
+│       ├── monkey.md
+│       └── example.md
+├── data/
+│   ├── apps_overview.yaml        # Homepage apps grid + mockups
+│   ├── config.yaml               # Site-wide defaults (nav, buttons, section titles, common items)
+│   └── site.yaml                 # Footer links/socials
 ├── layouts/
-│   └── apps/
-│       └── single.html          # App page template
-├── layouts/partials/
-│   ├── header.html              # Header partial
-│   ├── hero.html                # Hero section partial
-│   ├── app-sections.html        # App sections partial
-│   └── footer.html              # Footer partial
+│   ├── index.html                # Homepage (reads data/apps_overview.yaml)
+│   ├── _default/
+│   │   └── baseof.html           # Base HTML, Tailwind CDN, assets pipeline
+│   ├── app/
+│   │   └── single.html           # App page template (used by `type: app`)
+│   └── partials/
+│       ├── header.html
+│       ├── hero.html
+│       ├── app-sections.html     # Combines features/how/testimonials/faq/cta
+│       ├── features.html
+│       ├── how-it-works.html
+│       ├── testimonials.html
+│       ├── faq.html
+│       └── cta.html
+├── assets/
+│   ├── css/main.css              # Processed via Hugo resources
+│   └── js/main.js                # Processed via Hugo resources
 └── docs/
-    └── MODULAR_STRUCTURE.md     # Complete documentation
+    └── MODULAR_STRUCTURE.md
 ```
+
+## 🧠 How the templates resolve data
+
+- Header (`layouts/partials/header.html`)
+  - Home: suite logo and CTA
+  - App pages: logo/name from `params.logo` → `params.app` → `data/apps_overview.yaml`; nav from `params.nav` or `data/config.yaml`
+
+- Hero (`layouts/partials/hero.html`)
+  - Home: featured mockup from `data/apps_overview.yaml` (key `taskflow`)
+  - App pages: text from `params.hero`; download buttons from `params.hero.download_buttons` or `data/config.yaml`; mockup from `params.hero.mockup` → `params.app.mockup` → `data/apps_overview.yaml`
+
+- Sections (`layouts/partials/app-sections.html`)
+  - Falls back to titles/items in `data/config.yaml` when not provided
+
+- Footer (`data/site.yaml`)
+  - Links, socials, copyright
 
 ## ✨ **Features**
 
-- **One File Per App**: Each app is completely self-contained
-- **No Dependencies**: No external YAML files or complex configuration
-- **Easy to Add**: Copy an existing app file and modify the content
-- **Consistent Styling**: All apps use the same beautiful design
-- **Responsive Design**: Works perfectly on all devices
-- **Fast Loading**: Optimized for performance
+- Central homepage list from `data/apps_overview.yaml`
+- Self-contained app pages in `content/apps/*.md`
+- Sensible defaults via `data/config.yaml`
+- Tailwind via CDN + Hugo asset pipeline
+- Responsive and fast
 
 ## 🛠 **Development**
 
 ### **Prerequisites**
-- Hugo (latest version)
+- Hugo (extended, 0.100.0+)
 - Basic knowledge of Markdown and YAML
 
 ### **Running Locally**
@@ -183,6 +212,10 @@ hugo server -D
 hugo --minify
 ```
 
+## 🔗 Base URL
+
+Configured in `hugo.toml` as `baseURL`.
+
 ## 📚 **Documentation**
 
 For complete documentation, see:
@@ -198,14 +231,14 @@ For complete documentation, see:
 
 ## 🤝 **Contributing**
 
-1. Copy an existing app file
-2. Modify the content for your new app
+1. Add or update `content/apps/{slug}.md`
+2. Add/update `data/apps_overview.yaml` for homepage listing
 3. Test locally with Hugo
 4. Submit your changes
 
 ## 📄 **License**
 
-This project is open source and available under the [MIT License](LICENSE).
+This project is open source and available under the MIT License.
 
 ---
 
