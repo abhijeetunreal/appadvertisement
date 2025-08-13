@@ -1,0 +1,13 @@
+{{ define "main" }}
+<div style="padding: 20px;">
+    <h1>Apps Section</h1>
+    <p>This is the apps section list template.</p>
+    
+    <h2>Available Apps:</h2>
+    <ul>
+        {{ range .Pages }}
+        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+        {{ end }}
+    </ul>
+</div>
+{{ end }}
