@@ -13,20 +13,6 @@ app:
   tagline: "The ultimate task management solution for individuals and teams."
   description: "TaskFlow helps you manage your tasks, projects, and goals in one intuitive platform. Boost your productivity today."
 
-# Navigation structure
-nav:
-  links:
-    - name: "Features"
-      url: "#features"
-    - name: "How It Works"
-      url: "#how-it-works"
-    - name: "Testimonials"
-      url: "#testimonials"
-    - name: "FAQ"
-      url: "#faq"
-  button:
-    text: "Download"
-    url: "#download"
 
 # Hero section
 hero:

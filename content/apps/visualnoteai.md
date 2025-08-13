@@ -13,21 +13,6 @@ app:
   tagline: "The ultimate AI-powered visual note-taking solution for individuals and teams."
   description: "VisualNoteAI helps you capture, organize, and enhance your notes with cutting-edge AI technology. Boost your creativity and productivity today."
 
-# Navigation structure
-nav:
-  links:
-    - name: "Features"
-      url: "#features"
-    - name: "How It Works"
-      url: "#how-it-works"
-    - name: "Testimonials"
-      url: "#testimonials"
-    - name: "FAQ"
-      url: "#faq"
-  button:
-    text: "Download"
-    url: "#download"
-
 # Hero section
 hero:
   title: "Transform Your Notes with"

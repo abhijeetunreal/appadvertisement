@@ -13,20 +13,6 @@ app:
   tagline: "A test application to verify the system works."
   description: "This is a test app to verify that the Hugo system is working correctly and can render app pages."
 
-# Navigation structure
-nav:
-  links:
-    - name: "Features"
-      url: "#features"
-    - name: "How It Works"
-      url: "#how-it-works"
-    - name: "Testimonials"
-      url: "#testimonials"
-    - name: "FAQ"
-      url: "#faq"
-  button:
-    text: "Download"
-    url: "#download"
 
 # Hero section
 hero:
