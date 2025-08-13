@@ -121,28 +121,6 @@ cta:
   title: "Ready to Transform Your Productivity?"
   subtitle: "Join over 500,000 users who have organized their lives with TaskFlow. Download now and get started in minutes."
 
-# Footer section
-footer:
-  slogan: "The ultimate task management solution for individuals and teams."
-  copyright: "&copy; 2025 TaskFlow. All Rights Reserved."
-  links:
-    - title: "Product"
-      items:
-        - name: "Features"
-          url: "#features"
-        - name: "Pricing"
-          url: "#"
-    - title: "Company"
-      items:
-        - name: "About Us"
-          url: "#"
-        - name: "Contact"
-          url: "#"
-  socials:
-    - icon: "fab fa-facebook"
-      url: "#"
-    - icon: "fab fa-twitter"
-      url: "#"
 ---
 
 TaskFlow helps you manage your tasks, projects, and goals in one intuitive platform. Boost your productivity today.

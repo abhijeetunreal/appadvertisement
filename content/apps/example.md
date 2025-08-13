@@ -119,28 +119,6 @@ cta:
   title: "Ready to Try the Simple Approach?"
   subtitle: "Start building apps with just one file today."
 
-# Footer section
-footer:
-  slogan: "An example of the simple structure in action."
-  copyright: "&copy; 2025 ExampleApp. All Rights Reserved."
-  links:
-    - title: "Product"
-      items:
-        - name: "Features"
-          url: "#features"
-        - name: "Pricing"
-          url: "#"
-    - title: "Company"
-      items:
-        - name: "About Us"
-          url: "#"
-        - name: "Contact"
-          url: "#"
-  socials:
-    - icon: "fab fa-facebook"
-      url: "#"
-    - icon: "fab fa-twitter"
-      url: "#"
 ---
 
 This example shows how the simple structure makes adding new apps incredibly easy.

@@ -121,28 +121,6 @@ cta:
   title: "System Test Successful!"
   subtitle: "The Hugo system is working correctly. You can now create real apps."
 
-# Footer section
-footer:
-  slogan: "A test application to verify the system works."
-  copyright: "&copy; 2025 TestApp. All Rights Reserved."
-  links:
-    - title: "Product"
-      items:
-        - name: "Features"
-          url: "#features"
-        - name: "Pricing"
-          url: "#"
-    - title: "Company"
-      items:
-        - name: "About Us"
-          url: "#"
-        - name: "Contact"
-          url: "#"
-  socials:
-    - icon: "fab fa-facebook"
-      url: "#"
-    - icon: "fab fa-twitter"
-      url: "#"
 ---
 
 This test app verifies that the Hugo system is working correctly and can render all sections properly.

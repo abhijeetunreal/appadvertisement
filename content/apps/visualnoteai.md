@@ -121,28 +121,6 @@ cta:
   title: "Ready to Transform Your Note-Taking?"
   subtitle: "Join over 500,000 users who have enhanced their notes with VisualNoteAI. Download now and get started in minutes."
 
-# Footer section
-footer:
-  slogan: "The ultimate AI-powered visual note-taking solution for individuals and teams."
-  copyright: "&copy; 2025 VisualNoteAI. All Rights Reserved."
-  links:
-    - title: "Product"
-      items:
-        - name: "Features"
-          url: "#features"
-        - name: "Pricing"
-          url: "#"
-    - title: "Company"
-      items:
-        - name: "About Us"
-          url: "#"
-        - name: "Contact"
-          url: "#"
-  socials:
-    - icon: "fab fa-facebook"
-      url: "#"
-    - icon: "fab fa-twitter"
-      url: "#"
 ---
 
 VisualNoteAI helps you capture, organize, and enhance your notes with cutting-edge AI technology. Boost your creativity and productivity today.
