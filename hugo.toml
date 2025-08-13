@@ -1,3 +1,22 @@
 baseURL = 'https://abhijeetunreal.github.io/appadvertisement/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'App Suite - Productivity Tools'
+
+# Enable asset pipeline
+[build]
+  writeStats = true
+
+[build.assets]
+  minify = true
+
+[build.assets.css]
+  minify = true
+
+[build.assets.js]
+  minify = true
+
+# Enable Hugo Modules (optional, for future use)
+[module]
+  [module.hugoVersion]
+    extended = true
+    min = "0.100.0"

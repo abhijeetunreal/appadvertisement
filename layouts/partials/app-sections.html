@@ -1,0 +1,22 @@
+{{/* layouts/partials/app-sections.html */}}
+{{ $app := . }}
+
+{{ with $app.Params.features }}
+    {{ partial "features.html" . }}
+{{ end }}
+
+{{ with $app.Params.how_it_works }}
+    {{ partial "how-it-works.html" . }}
+{{ end }}
+
+{{ with $app.Params.testimonials }}
+    {{ partial "testimonials.html" . }}
+{{ end }}
+
+{{ with $app.Params.faq }}
+    {{ partial "faq.html" . }}
+{{ end }}
+
+{{ with $app.Params.cta }}
+    {{ partial "cta.html" . }}
+{{ end }}
