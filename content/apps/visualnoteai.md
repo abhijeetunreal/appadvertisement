@@ -24,14 +24,13 @@ hero:
       text_class: "text-primary"
       hover_bg_class: "hover:bg-gray-100"
       icon: "fas fa-desktop hidden sm:inline"
-      line1: "USE IT ON"
+      
       line2: "Desktop"
     - url: "https://visualnote.codefrydev.in/"
       bg_class: "bg-dark"
       text_class: "text-white"
       hover_bg_class: "hover:bg-gray-800"
       icon: "fas fa-mobile-alt inline sm:hiddene"
-      line1: "USE IT ON"
       line2: "Mobile"
   mockup:
     src: "https://raw.githubusercontent.com/abhijeetunreal/IMGDB/refs/heads/main/WebApp/VisualNoteAI/visualnote.codefrydev.in_(iPhone%2012%20Pro).png"
