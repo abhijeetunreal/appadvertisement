@@ -40,14 +40,14 @@
             {{ if $isHome }}
                 <span class="ml-3 font-bold text-xl text-dark">App Suite</span>
             {{ else if $appName }}
-                <a href="/apps/{{ $app.Params.slug }}/"><span class="ml-3 font-bold text-xl text-dark">{{ $appName }}</span></a>
+                <a href="{{ (printf "/apps/%s/" $app.Params.slug) | relURL }}"><span class="ml-3 font-bold text-xl text-dark">{{ $appName }}</span></a>
             {{ end }}
         </div>
         
         {{ if and (not $isHome) $nav }}
         <nav class="hidden md:flex space-x-8">
             {{ range $nav.links }}
-                <a href="{{ .url }}" class="nav-link-desktop font-medium text-gray-600 hover:text-primary">{{ .name }}</a>
+                <a href="{{ .url | relURL }}" class="nav-link-desktop font-medium text-gray-600 hover:text-primary">{{ .name }}</a>
             {{ end }}
         </nav>
         {{ end }}
@@ -71,7 +71,7 @@
     <div id="mobile-menu" class="hidden fixed inset-0 bg-white/95 backdrop-blur-lg md:hidden">
         <div class="flex flex-col items-center justify-center h-full space-y-8">
             {{ range $nav.links }}
-                <a href="{{ .url }}" class="text-2xl font-medium text-gray-700 hover:text-primary">{{ .name }}</a>
+                <a href="{{ .url | relURL }}" class="text-2xl font-medium text-gray-700 hover:text-primary">{{ .name }}</a>
             {{ end }}
             {{ with $nav.button }}
             <a href="{{ .url }}" class="mt-6 bg-primary text-white px-8 py-3 rounded-full text-lg font-medium">Download Now</a>
