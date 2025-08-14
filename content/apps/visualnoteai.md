@@ -17,26 +17,26 @@ app:
 hero:
   title: "Transform Your Notes with"
   highlighted_word: "AI Power"
-  subtitle: "VisualNoteAI helps you capture, organize, and enhance your notes with cutting-edge AI technology. Boost your creativity and productivity today."
+  subtitle: "Capture your world, transform it into smart notes, powered by AI. Your visual memory, reimagined"
   download_buttons:
-    - url: "#"
+    - url: "https://visualnote.codefrydev.in/"
       bg_class: "bg-white"
       text_class: "text-primary"
       hover_bg_class: "hover:bg-gray-100"
-      icon: "fab fa-apple"
-      line1: "Download on the"
-      line2: "App Store"
-    - url: "#"
+      icon: "fas fa-desktop hidden sm:inline"
+      line1: "USE IT ON"
+      line2: "Desktop"
+    - url: "https://visualnote.codefrydev.in/"
       bg_class: "bg-dark"
       text_class: "text-white"
       hover_bg_class: "hover:bg-gray-800"
-      icon: "fab fa-google-play"
-      line1: "GET IT ON"
-      line2: "Google Play"
+      icon: "fas fa-mobile-alt inline sm:hiddene"
+      line1: "USE IT ON"
+      line2: "Mobile"
   mockup:
-    src: "https://placehold.co/320x640/4361ee/ffffff?text=VisualNoteAI+App"
+    src: "https://raw.githubusercontent.com/abhijeetunreal/IMGDB/refs/heads/main/WebApp/VisualNoteAI/visualnote.codefrydev.in_(iPhone%2012%20Pro).png"
     alt: "VisualNoteAI App Screenshot"
-    fallback_src: "https://placehold.co/320x640/cccccc/ffffff?text=Image+Not+Found"
+    fallback_src: "https://raw.githubusercontent.com/abhijeetunreal/IMGDB/refs/heads/main/WebApp/VisualNoteAI/visualnote.codefrydev.in_(iPhone%2012%20Pro).png"
 
 # Features section
 features:
@@ -61,50 +61,78 @@ features:
 
 # How it works section
 how_it_works:
-  title: "Get Started in 3 Easy Steps"
+  title: "Get Started in Easy Steps"
   subtitle: "Simple setup, powerful results. Start taking AI-enhanced notes in minutes."
   steps:
-    - title: "Create Account"
-      description: "Sign up in less than 60 seconds with your email or social accounts."
-    - title: "Start Taking Notes"
-      description: "Capture notes with text, images, or voice. AI will enhance them automatically."
-    - title: "Enjoy AI Enhancement"
-      description: "Watch as AI organizes, categorizes, and improves your notes for better productivity."
+    - title: "Sign In"
+      description: "with Google"
+    - title: "Capture"
+      description: "your moment"
+    - title: "Let AI"
+      description: "Do the Magic"
+    - title: "View"
+      description: "in timeline"
+    - title: "Revisit"
+      description: "via calendar"
+    - title: "Sync"
+      description: "on all devices"
 
 # Testimonials section
 testimonials:
-  title: "Loved by Professionals Worldwide"
+  title: "Loved by Professionals"
   subtitle: "Join thousands of satisfied users transforming their productivity."
   cards:
     - avatar:
-        src: "https://placehold.co/48x48/7E22CE/ffffff?text=SJ"
-        alt: "Sarah Johnson"
-      name: "Sarah Johnson"
-      role: "Marketing Director, NY"
+        src: "https://media.licdn.com/dms/image/v2/D4D03AQEbyuYDrCi7CA/profile-displayphoto-shrink_200_200/B4DZeL1HfnGsAc-/0/1750397648340?e=2147483647&v=beta&t=2mT2tbfgN6JAyrgSejm9kw9DjAo9EyzdmUQVj12CHng"
+        alt: "Sagar Priyadarshi"
+      name: "Sagar Priyadarshi"
+      role: "Writer, Actor and Teacher"
+      role: "Writer, Actor and Teacher, Mumbai"
       quote: "VisualNoteAI has revolutionized how I take and organize notes. The AI enhancement features are absolutely game-changing!"
     - avatar:
-        src: "https://placehold.co/48x48/16A34A/ffffff?text=MC"
-        alt: "Michael Chen"
-      name: "Michael Chen"
-      role: "Software Engineer, CA"
-      quote: "As a developer, I love how VisualNoteAI automatically organizes my technical notes and diagrams with AI recognition."
+        src: "https://avatars.githubusercontent.com/u/71241536?v=4"
+        alt: "Abhijeet"
+      name: "Abhijeet"
+      role: "Product designer, Bengaluru"
+      quote: "As a Product designer, I love how VisualNoteAI automatically organizes my life notes and insperation with AI recognition."
+
+    - avatar:
+        src: "https://codefrydev.in/about/users/prashant/prashant.jpg"
+        alt: "Prashant"
+      name: "Prashant"
+      role: ".Net backend Developer, Bengaluru"
+      quote: "As a developer, I love to use VisualNoteAI, it help me track and organizes my life using inhanced automated note with AI."
 
 # FAQ section
 faq:
   title: "Frequently Asked Questions"
   subtitle: "Have questions? We've got answers. Contact our support team if you need more help."
   items:
-    - question: "Is VisualNoteAI free to use?"
-      answer: "Yes, VisualNoteAI offers a robust free version with all essential AI features. We also offer premium plans with advanced AI capabilities."
-    - question: "Is my data secure with VisualNoteAI?"
-      answer: "Absolutely. We use industry-standard encryption for all data in transit and at rest. Your notes are private and secure."
-    - question: "Can I use VisualNoteAI on multiple devices?"
-      answer: "Yes, VisualNoteAI syncs seamlessly across all your devices, including a web app that works on any browser."
+    - question: "What is Visual Notes AI?"
+      answer: "Visual Notes AI is a smart diary app that lets you capture your daily life visually and transform it into meaningful, AI-powered storytelling. Your moments are stored securely on your Google Drive, accessible anytime, anywhere."
+    - question: "How does it work?"
+      answer: "Simply sign in with your Google account, capture moments using your device’s camera, and let AI create rich, story-like notes for each memory. You can browse your life’s timeline or revisit past moments from the calendar view."
+    - question: "Where is my data stored?"
+      answer: "All your photos, notes, and stories are stored directly on your Google Drive. This ensures complete privacy, full control, and high-level Google security"
+    - question: "Is my data safe?"
+      answer: "Yes. Since everything is stored in your own Google Drive, only you have access. The app never stores your data on external servers, ensuring complete security and privacy."
+    - question: "Can I access my notes from multiple devices?"
+      answer: "Absolutely! Visual Notes AI syncs across devices with just one click—no extra setup required. Your timeline and memories are always up to date."
+    - question: "What makes Visual Notes AI different from a normal diary?"
+      answer: "Instead of plain text entries, our AI turns your daily captures into beautiful, story-driven memories that are worth revisiting—making your diary feel alive."
+
+    - question: "How do I view my old memories?"
+      answer: "You can use the built-in calendar to pick any past date. Your captured moments and AI-crafted notes will appear, letting you relive your best memories instantly."
+    - question: "Does the AI write my stories automatically?"
+      answer: "Yes. Once you capture a moment, the AI analyzes it and generates a personalized narrative—giving life to your visual memories."
+    - question: "Do I need an internet connection?"
+      answer: "Yes, an internet connection is required for syncing, AI story generation, and accessing your Google Drive."
+    
 
 # CTA section
 cta:
   title: "Ready to Transform Your Note-Taking?"
-  subtitle: "Join over 500,000 users who have enhanced their notes with VisualNoteAI. Download now and get started in minutes."
+  subtitle: "Join users who have enhanced their notes with VisualNoteAI. Use it now on your mobile device or desktop and get started in minutes."
 
 ---
 

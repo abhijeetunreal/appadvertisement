@@ -14,19 +14,23 @@
         </div>
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {{ range .Site.Data.apps_overview.apps }}
+            {{ range $key, $app := .Site.Data.apps_overview.apps }}
             <div class="feature-card bg-white rounded-2xl shadow-lg border border-gray-100 flex flex-col">
                 <div class="p-8 flex-grow">
                     <div class="flex items-center mb-4">
-                        <div class="bg-primary w-12 h-12 rounded-lg flex items-center justify-center mr-4">
-                            <span class="text-white font-bold text-2xl">{{ .logo.initials }}</span>
+                        <div class="bg-primary w-12 h-12 rounded-lg flex items-center justify-center mr-4 overflow-hidden">
+                            {{ if $app.logo.src }}
+                                <img src="{{ $app.logo.src }}" alt="{{ $app.logo.name }}" class="w-12 h-12 object-cover">
+                            {{ else }}
+                                <span class="text-white font-bold text-2xl">{{ $app.logo.initials }}</span>
+                            {{ end }}
                         </div>
-                        <h3 class="text-2xl font-bold">{{ .logo.name }}</h3>
+                        <h3 class="text-2xl font-bold">{{ $app.logo.name }}</h3>
                     </div>
-                    <p class="text-gray-600 mb-4">{{ .tagline }}</p>
+                    <p class="text-gray-600 mb-4">{{ $app.tagline }}</p>
                 </div>
                 <div class="p-6 bg-gray-50 rounded-b-2xl border-t">
-                    <a href="apps/{{ .slug }}/" class="block text-center bg-primary text-white font-medium py-3 px-6 rounded-lg hover:bg-secondary transition-colors duration-300">
+                    <a href="apps/{{ $app.slug }}/" class="block text-center bg-primary text-white font-medium py-3 px-6 rounded-lg hover:bg-secondary transition-colors duration-300">
                         View Details <i class="fas fa-arrow-right ml-2"></i>
                     </a>
                 </div>
