@@ -37,9 +37,16 @@
             <div class="iphone-mockup">
                 <div class="iphone-notch"><div class="iphone-camera"></div></div>
                 {{ if $isHome }}
-                    {{ $featuredApp := index .Site.Data.apps_overview.apps "taskflow" }}
-                    {{ with $featuredApp }}
-                        <img src="{{ .hero.mockup.src }}" alt="{{ .hero.mockup.alt }}" class="iphone-screen" onerror="this.onerror=null;this.src='{{ .hero.mockup.fallback_src }}';">
+                    {{ $home := .Site.Data.site.home }}
+                    {{ if and $home $home.custom_mockup $home.custom_mockup.src }}
+                        <img src="{{ $home.custom_mockup.src }}" alt="{{ $home.custom_mockup.alt }}" class="iphone-screen" onerror="this.onerror=null;this.src='{{ $home.custom_mockup.fallback_src }}';">
+                    {{ else }}
+                        {{ $featuredSlug := "visualnoteai" }}
+                        {{ with .Site.Data.site.home.featured_app_slug }}{{ $featuredSlug = . }}{{ end }}
+                        {{ $featuredApp := index .Site.Data.apps_overview.apps $featuredSlug }}
+                        {{ with $featuredApp }}
+                            <img src="{{ .hero.mockup.src }}" alt="{{ .hero.mockup.alt }}" class="iphone-screen" onerror="this.onerror=null;this.src='{{ .hero.mockup.fallback_src }}';">
+                        {{ end }}
                     {{ end }}
                 {{ else if $app.Params.hero.mockup }}
                     <img src="{{ $app.Params.hero.mockup.src }}" alt="{{ $app.Params.hero.mockup.alt }}" class="iphone-screen" onerror="this.onerror=null;this.src='{{ $app.Params.hero.mockup.fallback_src }}';">

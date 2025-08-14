@@ -1,5 +1,14 @@
 # data/site.yaml
 
+home:
+  # Pick which app's screenshot to render inside the phone on the home page
+  featured_app_slug: "visualnoteai"
+  # Optional: override with a custom image
+  custom_mockup:
+    src: "https://raw.githubusercontent.com/abhijeetunreal/IMGDB/refs/heads/main/WebApp/AppSuit.png"          # e.g. https://example.com/your-screenshot.png
+    alt: "Custom Home Mockup"
+    fallback_src: "" # optional fallback URL
+
 footer:
   copyright: "&copy; 2025 App Suite. All Rights Reserved."
   links:
