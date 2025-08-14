@@ -6,6 +6,9 @@ title = 'App Suite - Productivity Tools'
 [build]
   writeStats = true
 
+# Ensure all generated URLs are canonical to baseURL (important for subpath deploys)
+canonifyURLs = true
+
 [build.assets]
   minify = true
 

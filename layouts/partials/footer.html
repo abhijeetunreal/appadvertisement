@@ -22,7 +22,7 @@
                     <h5 class="font-bold text-white mb-4">{{ .title }}</h5>
                     <ul class="space-y-2">
                         {{ range .items }}
-                        <li><a href="{{ .url | relURL }}" class="hover:text-white">{{ .name }}</a></li>
+                        <li><a href="{{ .url | absURL }}" class="hover:text-white">{{ .name }}</a></li>
                         {{ end }}
                     </ul>
                 </div>

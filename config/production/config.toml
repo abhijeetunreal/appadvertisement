@@ -1,1 +1,2 @@
-baseURL = "https://abhijeetunreal.github.io/appadvertisement/"
+baseURL = "https://appsuit.codefrydev.in/"
+canonifyURLs = true
