@@ -242,4 +242,4 @@ This project is open source and available under the MIT License.
 
 ---
 
-**Adding new apps has never been easier! Just one file and you're done.** 🎉
+**Adding new apps has never been easier! Just one file and you're done** 🎉
