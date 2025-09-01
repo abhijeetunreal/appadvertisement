@@ -33,7 +33,7 @@ hero:
       icon: "fas fa-mobile-alt inline sm:hiddene"
       line2: "Mobile"
   mockup:
-    src: "https://raw.githubusercontent.com/abhijeetunreal/IMGDB/refs/heads/main/WebApp/VisualNoteAI/visualnote.codefrydev.in_(iPhone%2012%20Pro).png"
+    src: "https://raw.githubusercontent.com/abhijeetunreal/IMGDB/refs/heads/main/WebApp/VisualNoteAI/vnthumbnai.gif"
     alt: "VisualNoteAI App Screenshot"
     fallback_src: "https://raw.githubusercontent.com/abhijeetunreal/IMGDB/refs/heads/main/WebApp/VisualNoteAI/visualnote.codefrydev.in_(iPhone%2012%20Pro).png"
 
