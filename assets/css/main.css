@@ -127,3 +127,43 @@ body {
 .hamburger-icon.open .line3 { 
     transform: rotate(-45deg) translate(5px, -5px); 
 }
+
+/* Gallery horizontal scroll styles */
+.gallery-scroll-container {
+    overflow-x: auto;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.gallery-scroll-container::-webkit-scrollbar {
+    display: none; /* WebKit */
+}
+
+.gallery-scroll-content {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1rem 0;
+    animation: scroll 30s linear infinite;
+}
+
+.gallery-scroll-content:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.gallery-image {
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.gallery-image:hover {
+    transform: scale(1.05);
+}

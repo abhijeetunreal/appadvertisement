@@ -8,10 +8,17 @@
     {{ partial "features.html" . }}
 {{ end }}
 
+{{ $gallery := $app.Params.gallery }}
+{{ with $gallery }}
+    {{ partial "gallery.html" . }}
+{{ end }}
+
 {{ $how := or $app.Params.how_it_works (or $app.Params.app.how_it_works (and $siteConfig.sections.how_it_works (dict "title" $siteConfig.sections.how_it_works.title "subtitle" $siteConfig.sections.how_it_works.subtitle "steps" $siteConfig.common_steps))) }}
 {{ with $how }}
     {{ partial "how-it-works.html" . }}
 {{ end }}
+
+
 
 {{ $testimonials := or $app.Params.testimonials (and $siteConfig.sections.testimonials (dict "title" $siteConfig.sections.testimonials.title "subtitle" $siteConfig.sections.testimonials.subtitle "cards" (slice))) }}
 {{ with $testimonials }}

@@ -71,6 +71,29 @@ how_it_works:
     - title: "Sync"
       description: "on all devices"
 
+# Gallery section (opt-in)
+gallery:
+  title: ""
+  subtitle: ""
+  featured_image:
+    src: "https://raw.githubusercontent.com/abhijeetunreal/IMGDB/refs/heads/main/Portfolio/Recall/ML.png"
+    alt: "Recall Main Screen"
+  images:
+    - src: "https://raw.githubusercontent.com/abhijeetunreal/IMGDB/refs/heads/main/Portfolio/Recall/M3.png"
+      alt: "Recall Screen 3"
+    - src: "https://raw.githubusercontent.com/abhijeetunreal/IMGDB/refs/heads/main/Portfolio/Recall/M4.png"
+      alt: "Recall Screen 4"
+    - src: "https://raw.githubusercontent.com/abhijeetunreal/IMGDB/refs/heads/main/Portfolio/Recall/M5.png"
+      alt: "Recall Screen 5"
+    - src: "https://raw.githubusercontent.com/abhijeetunreal/IMGDB/refs/heads/main/Portfolio/Recall/M6.png"
+      alt: "Recall Screen 6"
+    - src: "https://raw.githubusercontent.com/abhijeetunreal/IMGDB/refs/heads/main/Portfolio/Recall/M7.png"
+      alt: "Recall Screen 7"
+    - src: "https://raw.githubusercontent.com/abhijeetunreal/IMGDB/refs/heads/main/Portfolio/Recall/M1.png"
+      alt: "Recall Screen 1"
+    - src: "https://raw.githubusercontent.com/abhijeetunreal/IMGDB/refs/heads/main/Portfolio/Recall/M2.png"
+      alt: "Recall Screen 2"
+
 # Testimonials section
 testimonials:
   title: "Loved by Professionals"
