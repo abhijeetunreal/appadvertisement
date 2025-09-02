@@ -1,5 +1,5 @@
 ---
-title: "VisualNoteAI - Transform Your Notes with AI"
+title: "Recall - Transform Your Notes with AI"
 description: "The ultimate AI-powered visual note-taking solution for individuals and teams."
 date: 2025-01-27
 draft: false
@@ -8,7 +8,7 @@ type: "app"
 
 # App-specific metadata
 app:
-  name: "VisualNoteAI"
+  name: "Recall"
   initials: "VN"
   tagline: "The ultimate AI-powered visual note-taking solution for individuals and teams."
   description: "VisualNoteAI helps you capture, organize, and enhance your notes with cutting-edge AI technology. Boost your creativity and productivity today."
@@ -23,17 +23,12 @@ hero:
       bg_class: "bg-white"
       text_class: "text-primary"
       hover_bg_class: "hover:bg-gray-100"
-      icon: "fas fa-desktop hidden sm:inline"
+      icon: "fas fa-star-of-life hidden sm:inline"
       
-      line2: "Desktop"
-    - url: "https://visualnote.codefrydev.in/"
-      bg_class: "bg-dark"
-      text_class: "text-white"
-      hover_bg_class: "hover:bg-gray-800"
-      icon: "fas fa-mobile-alt inline sm:hiddene"
-      line2: "Mobile"
+      line2: "Try Now"
+    
   mockup:
-    src: "https://raw.githubusercontent.com/abhijeetunreal/IMGDB/refs/heads/main/WebApp/VisualNoteAI/vnthumbnai.gif"
+    src: "https://raw.githubusercontent.com/abhijeetunreal/IMGDB/refs/heads/main/WebApp/VisualNoteAI/RecallScreen.png"
     alt: "VisualNoteAI App Screenshot"
     fallback_src: "https://raw.githubusercontent.com/abhijeetunreal/IMGDB/refs/heads/main/WebApp/VisualNoteAI/visualnote.codefrydev.in_(iPhone%2012%20Pro).png"
 
@@ -87,28 +82,28 @@ testimonials:
       name: "Sagar Priyadarshi"
       role: "Writer, Actor and Teacher"
       role: "Writer, Actor and Teacher, Mumbai"
-      quote: "VisualNoteAI has revolutionized how I take and organize notes. The AI enhancement features are absolutely game-changing!"
+      quote: "Recall has revolutionized how I take and organize notes. The AI enhancement features are absolutely game-changing!"
     - avatar:
         src: "https://avatars.githubusercontent.com/u/71241536?v=4"
         alt: "Abhijeet"
       name: "Abhijeet"
       role: "Product designer, Bengaluru"
-      quote: "As a Product designer, I love how VisualNoteAI automatically organizes my life notes and insperation with AI recognition."
+      quote: "As a Product designer, I love how Recall automatically organizes my life notes and insperation with AI recognition."
 
     - avatar:
         src: "https://codefrydev.in/about/users/prashant/prashant.jpg"
         alt: "Prashant"
       name: "Prashant"
       role: ".Net backend Developer, Bengaluru"
-      quote: "As a developer, I love to use VisualNoteAI, it help me track and organizes my life using inhanced automated note with AI."
+      quote: "As a developer, I love to use Recall, it help me track and organizes my life using inhanced automated note with AI."
 
 # FAQ section
 faq:
   title: "Frequently Asked Questions"
   subtitle: "Have questions? We've got answers. Contact our support team if you need more help."
   items:
-    - question: "What is Visual Notes AI?"
-      answer: "Visual Notes AI is a smart diary app that lets you capture your daily life visually and transform it into meaningful, AI-powered storytelling. Your moments are stored securely on your Google Drive, accessible anytime, anywhere."
+    - question: "What is Recall?"
+      answer: "Recall is a smart diary app that lets you capture your daily life visually and transform it into meaningful, AI-powered storytelling. Your moments are stored securely on your Google Drive, accessible anytime, anywhere."
     - question: "How does it work?"
       answer: "Simply sign in with your Google account, capture moments using your device’s camera, and let AI create rich, story-like notes for each memory. You can browse your life’s timeline or revisit past moments from the calendar view."
     - question: "Where is my data stored?"

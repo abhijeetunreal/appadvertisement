@@ -5,8 +5,8 @@ apps:
     tagline: "The ultimate AI-powered visual note-taking solution for individuals and teams."
     logo:
       initials: "VN"
-      name: "VisualNoteAI"
-      src: "https://raw.githubusercontent.com/abhijeetunreal/IMGDB/refs/heads/main/WebApp/VisualNoteAI/visualNoteAILogo.png"
+      name: "Recall"
+      src: "https://raw.githubusercontent.com/abhijeetunreal/IMGDB/refs/heads/main/WebApp/VisualNoteAI/WecallLogoW.png"
     hero:
       mockup:
         src: "https://raw.githubusercontent.com/abhijeetunreal/IMGDB/refs/heads/main/WebApp/VisualNoteAI/visualnote.codefrydev.in_(iPhone%2012%20Pro).png"
